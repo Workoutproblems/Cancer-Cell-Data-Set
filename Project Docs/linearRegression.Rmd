@@ -1,9 +1,9 @@
 ---
-title: "linearRegression"
+title: "LinearRegression"
 author: "Johnny"
 date: "11/24/2018"
 output:
-  html_document: default
+  html_document: github_document
   pdf_document: default
   word_document: default
 ---
@@ -148,7 +148,6 @@ mean_test_prediction_error
 
 mean_test_prediction_error = 0
 
-# if we remove column of row numbers in excel
 VA_data = subset(VA, select = -c(treat))
 
 library(randomForest)

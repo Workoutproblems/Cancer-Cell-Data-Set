@@ -7,28 +7,9 @@
 # predictors have an effect on survival time.
 library(MASS)
 attach(VA)
-#head(VA)
-#str(VA)
-#pairs(VA)
-#summary(VA)
 
-#  RANDOMLY SPLIT INTO 80/20
-#set.seed(1)
-#samplesize = 0.80 * nrow(VA)
-#index = sample( seq_len( nrow ( VA ) ), size = samplesize)
-#datatrain = VA[ index, ]
-#datatest = VA[ -index, ]
-
-#  FITTING MODEL
-#lm.fit <- lm(stime ~ ., data=VA)
-#summary(lm.fit)
-
-#  PREDICT - ERROR
-#VAtrain = lm(stime ~ ., data = VA, subset = index)
-#mean((VA$stime - predict(VAtrain, VA))[-index]^2)
 
 #  10 TEST ERROR PREDICTIONS
-#means <- c(1:10)
 set.seed(1)
 samplesize = 0.80 * nrow(VA)
 meanAvg = 0
@@ -42,7 +23,6 @@ for (i in 1:10) {
   
   #  FITTING & PREDICTION
   VAtrain = lm(stime ~ ., data = VA, subset = index)
-  #means[i] = mean((VA$stime - predict(VAtrain, VA))[-index]^2)
   meanAvg = meanAvg + mean((VA$stime - predict(VAtrain, VA))[-index]^2)
   
 }
@@ -56,19 +36,10 @@ for (i in 1:10) {
 }
 
 
-#par(mfrow=c(2,2))
-#plot(lm.fit)
-#par(mfrow=c(1,1))
-
-
 lm.fit = lm(Karn ~ treat, data = VA)
 lm.fit2 = lm(Karn ~ treat, data = VA)
 summary(lm.fit)
 str(VA)
-
-
-
-
 
 
 
@@ -116,10 +87,6 @@ for(i in 1:10)
 #Mean test prediction error
 mean_test_prediction_error = mean_test_prediction_error/10
 mean_test_prediction_error
-
-
-
-
 
 
 
