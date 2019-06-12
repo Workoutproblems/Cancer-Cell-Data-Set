@@ -5,15 +5,15 @@ Johnny
 
 ## The data set VeteranLungCancer.CSV contains data from the Veteran’s Administration Lung Cancer Trial (Kalbfleisch and Prentice). The data are described below.
 
-* Treatment denotes the type of lung cancer treatment; 1 (standard) and 2 (test drug)
-* CellType denotes the type of cell involved; 1 (squamous), 2 (small cell), 3 (adeno), 4
+* **Treatment** denotes the type of lung cancer treatment; 1 (standard) and 2 (test drug)
+* **CellType** denotes the type of cell involved; 1 (squamous), 2 (small cell), 3 (adeno), 4
 (large)
-* Survival is the survival time in days since the treatment
-* Status denotes the status of the patient as dead or alive; 1 (dead), 0 (alive)
-* Karnofsky is the Karnofsky score
-* Diag is the time since diagnosis in months
-* Age is the age in years
-* Therapy denotes any prior therapy; 0 (none), 10 (yes)
+* **Survival** is the survival time in days since the treatment
+* **Status** denotes the status of the patient as dead or alive; 1 (dead), 0 (alive)
+* **Karnofsky** is the Karnofsky score
+* **Diag** is the time since diagnosis in months
+* **Age** is the age in years
+* **Therapy** denotes any prior therapy; 0 (none), 10 (yes)
 
 
 ``` r
